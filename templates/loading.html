@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/loading_style.css') }}">
+</head>
+<body>
+    <div class="wrap-loader">
+        <div class="loader">
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="wrap-text"> 
+            <div class="text"><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span><span>...</span>
+            </div>
+          </div>
+        </div>
+        <div class="loader-text">Analysing</div>
+        <div class="loader-text">Image</div>
+      </div>
+      <script src="{{url_for('static', filename='')}}"></script>
+    <script> window.location.replace('/reducesize/{{filename}}'); </script>
+</body>
+</html>

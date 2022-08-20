@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 300;
+    src: url(https://fonts.gstatic.com/s/exo2/v20/7cH1v4okm5zmbvwkAx_sfcEuiD8j4PKsOdC6.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/exo2/v20/7cH1v4okm5zmbvwkAx_sfcEuiD8jvvKsOdC6.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    src: url(https://fonts.gstatic.com/s/exo2/v20/7cH1v4okm5zmbvwkAx_sfcEuiD8jjPKsOdC6.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    src: url(https://fonts.gstatic.com/s/exo2/v20/7cH1v4okm5zmbvwkAx_sfcEuiD8jWfWsOdC6.ttf) format('truetype');
+  }
+  body {
+    background: #000000;
+    font-family: "Exo 2";
+  }
+  .zone {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 5%;
+    right: 0;
+    background: radial-gradient(ellipse at center, #7cd7fe 0, #2f4ec9 100%);
+    width: 80%;
+    height: 60%;
+    border: 5px dashed white;
+    text-align: center;
+    color: white;
+    z-index: 20;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+  }
+  .zone .btnCompression .active {
+    background: #EB6A5A;
+    color: white;
+  }
+  .zone i {
+    text-align: center;
+    font-size: 10em;
+    color: #fff;
+    margin-top: 50px;
+  }
+  .zone .selectFile {
+    height: 50px;
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+  }
+  .zone label,
+  .zone input {
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: 5px;
+  }
+  .zone label {
+    background: #fff;
+    color: #5a72eb;
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 50px;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 400;
+    box-shadow: 0 1px 1px gray;
+  }
+  .zone input[type=file] {
+    opacity: 0;
+  }
+  .zone.in {
+    color: white;
+    border-color: white;
+    background: radial-gradient(ellipse at center, #EB6A5A 0, #c9402f 100%);
+  }
+  .zone.in i {
+    color: #fff;
+  }
+  .zone.in label {
+    background: #fff;
+    color: #EB6A5A;
+  }
+  .zone.hover {
+    color: gray;
+    border-color: white;
+    background: #fff;
+    border: 5px dashed gray;
+  }
+  .zone.hover i {
+    color: #532b25;
+  }
+  .zone.hover label {
+    background: #fff;
+    color: #EB6A5A;
+  }
+  .zone.fade {
+    transition: all 0.3s ease-out;
+    opacity: 1;
+  }
+
+.social-menu ul{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    padding: 0;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.social-menu ul li .fab{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .3s;
+    color: #000;
+}
+
+.social-menu ul li .fab:hover{
+    color: #fff;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10%);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: rgba(0, 0, 0, 0.829);
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #E4405F;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #0077b5;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #000;
+}
+
+svg text {
+  font-family: Lora;
+  letter-spacing: 10px;
+  stroke: #bd71f4;
+  font-size: 75px;
+  font-weight: 700;
+  stroke-width: 6;
+ 
+  animation: textAnimate 5s infinite alternate;
+  
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 30%;
+    stroke-dashoffset:  20%;
+    stroke-width: 1;
+    fill:hsl(0, 0%, 0%)
+    
+  }
+  
+  100% {
+    stroke-width: 3;
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: rgb(255, 255, 255)
+  }
+  
+}
