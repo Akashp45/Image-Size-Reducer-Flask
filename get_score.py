@@ -24,7 +24,6 @@ def NonOverlappingCropPatches(im, patch_size=32, stride=32):
             patches = patches + (patch,)
     return patches
 
-
 class CNNIQAnet(nn.Module):
     def __init__(self, ker_size=7, n_kers=50, n1_nodes=800, n2_nodes=800):
         super(CNNIQAnet, self).__init__()
