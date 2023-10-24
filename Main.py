@@ -24,6 +24,8 @@ def laoding():
 	if(request.method=='GET'):
 		return render_template('upload.html')
 	try:
+		if(not os.path.exists(os.getcwd()+"/uploads")):
+			os.mkdir('uploads')
 		f=request.files['image']
 		f.save("uploads/"+f.filename)
 		image_q.append(f.filename)
