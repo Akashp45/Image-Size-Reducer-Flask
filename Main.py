@@ -51,8 +51,16 @@ scheduler.add_job(func=lambda:cleaner(image_q), trigger="interval", minutes=10)
 scheduler.start()
 
 # main driver function
+# if __name__ == '__main__':
+# 	if(not os.path.exists(os.getcwd()+"/uploads")):
+# 		os.mkdir('uploads')
+# 	app.run(debug=True)
+# 	atexit.register(lambda:scheduler.shutdown())
+
+# main driver function
 if __name__ == '__main__':
-	if(not os.path.exists(os.getcwd()+"/uploads")):
-		os.mkdir('uploads')
-	app.run(debug=True)
-	atexit.register(lambda:scheduler.shutdown())
+    if not os.path.exists(os.getcwd() + "/uploads"):
+        os.mkdir('uploads')
+    app.run(host='0.0.0.0', port=5000, debug=True)
+    atexit.register(lambda: scheduler.shutdown())
+
